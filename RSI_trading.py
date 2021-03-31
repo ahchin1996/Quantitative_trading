@@ -5,7 +5,8 @@ import pandas as pd
 import numpy as np
 from matplotlib import gridspec
 
-SPY = pdr.get_data_tiingo('AAPL', api_key='63e3bed28936dbb6416aeb18440310f60884fcf6')
+
+SPY = pdr.get_data_tiingo('SPY', api_key='63e3bed28936dbb6416aeb18440310f60884fcf6')
 SPY = SPY.reset_index(level=[0,1])
 SPY.index = SPY['date']
 SPY_adj = SPY.iloc[:,7:12]
